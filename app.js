@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const lodash = require("lodash");
-mongoose.connect("Your MongoDB Server Link", {
+mongoose.connect(process.env.MONGODB_SERVER, {
   useNewUrlParser: true
 });
 
